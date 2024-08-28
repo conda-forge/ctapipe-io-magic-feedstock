@@ -27,6 +27,7 @@ requirements:
     - ctapipe >=0.19.0,<0.20.dev0
     - numpy >=1.22
     - uproot >=5.0,<6.dev0
+    - scipy <1.14
 
 test:
   imports:
