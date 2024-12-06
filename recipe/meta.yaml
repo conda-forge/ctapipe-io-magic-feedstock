@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - astropy >=5.0,<6.dev0
+    - astropy-base >=5.0,<6.dev0
     - ctapipe >=0.19.0,<0.20.dev0
     - numpy >=1.22
     - uproot >=5.0,<6.dev0
