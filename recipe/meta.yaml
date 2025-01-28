@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - astropy >=5.0,<6.dev0
+    - astropy-base >=5.0,<6.dev0
     - ctapipe >=0.19.0,<0.20.dev0
     - numpy >=1.22
     - uproot >=5.0,<6.dev0
