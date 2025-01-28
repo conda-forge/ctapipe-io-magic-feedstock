@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ctapipe_io_magic-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ctapipe_io_magic-{{ version }}.tar.gz
   sha256: e7bf24bde74e27499f9ebcce8e008bfb345a9f5756d7aabb221b7b88a532b3b3
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=64.0.3
     - wheel
     - setuptools-scm >=3.4
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - astropy >=5.0,<6.dev0
     - ctapipe >=0.19.0,<0.20.dev0
     - numpy >=1.22
@@ -37,6 +37,7 @@ test:
     - python -c "from ctapipe_io_magic import __version__; print(__version__)"
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/cta-observatory/ctapipe_io_magic
