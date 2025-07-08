@@ -1,5 +1,5 @@
 {% set name = "ctapipe-io-magic" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ctapipe_io_magic-{{ version }}.tar.gz
-  sha256: daa1e392c3e25f8d2e7bd39e9b4553344d4332c1455c8d4abde3c682843d7387
+  sha256: 29c6f21a03042c76bc8497beedb385eb5afba91b4a67f06a8c2423619a2991a7
 
 build:
   noarch: python
@@ -23,8 +23,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - astropy-base >=5.0,<6.dev0
-    - ctapipe >=0.19.0,<0.20.dev0
+    - astropy-base >=6.1,<8.dev0
+    - ctapipe >=0.25.0,<0.27.dev0
     - numpy >=1.22
     - uproot >=5.0,<6.dev0
     - scipy <1.14
