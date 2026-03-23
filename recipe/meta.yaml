@@ -1,5 +1,5 @@
 {% set name = "ctapipe-io-magic" %}
-{% set version = "0.5.7" %}
+{% set version = "0.5.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ctapipe_io_magic-{{ version }}.tar.gz
-  sha256: 29c6f21a03042c76bc8497beedb385eb5afba91b4a67f06a8c2423619a2991a7
+  sha256: 9cc7fea35c8d2c3d5b6a26c44ad81a9aa8eb33da7627cb5a11d3accc1f27a7bc
 
 build:
   noarch: python
